@@ -1,0 +1,2 @@
+include versioneer.py
+include apollox/_version.py
