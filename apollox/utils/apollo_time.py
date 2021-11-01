@@ -16,7 +16,7 @@ def apollo_met_from_utc(utc_time: Time) -> float:
     :returns:
 
     """
-    return (APOLLO_LAUNCH_TIME - utc_time).to(u.s)
+    return (utc_time - APOLLO_LAUNCH_TIME).to(u.s).value
 
 
 def utc_from_apollo_met(met: float) -> Time:
