@@ -6,7 +6,12 @@ __author__ = """J. Michael Burgess"""
 __email__ = "jburgess@mpe.mpg.de"
 
 from .apollo_data import ApolloDetectorData
-from .utils import ApolloTime, apollo_met_from_utc, utc_from_apollo_met
+from .utils import (
+    ApolloTime,
+    apollo_met_from_utc,
+    utc_from_apollo_met,
+    PointingHistory,
+)
 
 from . import _version
 
