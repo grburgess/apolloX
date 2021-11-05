@@ -23,6 +23,22 @@ class ApolloDetectorData:
         t_zero: Optional[Time] = None,
     ):
 
+        """
+        Reads in and processes data from the
+        .dat files of Apollo
+
+
+        :param file_name:
+        :type file_name: str
+        :param instrument:
+        :type instrument: str
+        :param response:
+        :type response: InstrumentResponse
+        :param t_zero:
+        :type t_zero: Optional[Time]
+        :returns:
+
+        """
         data = np.genfromtxt(file_name)
 
         self._time = ApolloTime.from_met((data[:, 0] * u.hour).to(u.s).value)
