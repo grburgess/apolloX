@@ -25,7 +25,7 @@ class ApolloResponse(ResponseDatabase):
 
             mc_energies = f["mc_energies"][()]
 
-        super(ApolloResponse, self).__init__(
+        super().__init__(
             list_of_matrices=list_of_matrices,
             theta=theta,
             phi=phi,
@@ -41,9 +41,7 @@ class ApolloResponse(ResponseDatabase):
 
     def _transform_to_instrument_coordinates(self, ra: float, dec: float):
 
-        return super(ApolloResponse, self)._transform_to_instrument_coordinates(
-            ra, dec
-        )
+        return super()._transform_to_instrument_coordinates(ra, dec)
 
 
 class Apollo_Al_Response(ApolloResponse):
